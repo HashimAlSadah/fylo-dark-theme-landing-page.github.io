@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+}
+
+body {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+p, small {
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.header, .main > * {
+  padding: 2em;
+}
+
+.intro .hero img,
+.productivity-hero img {
+  display: block;
+  width: 100%;
+}
+
+.header {
+  background-color: #1c2431;
+  background-image: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100% calc(min(100%, 400px));
+}
+
+@media (min-width: 700px) {
+  .header {
+    padding: 3em 4em;
+  }
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.header .logo img {
+  width: 100px;
+}
+
+@media (min-width: 700px) {
+  .header .logo img {
+    width: 130px;
+  }
+}
+
+.header .menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.header .menu a {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 700px) {
+  .header .menu {
+    gap: 3em;
+  }
+  .header .menu a:hover {
+    text-decoration-color: inherit;
+    font-weight: 700;
+  }
+}
+
+.header .hero {
+  margin: 2.5em 0;
+}
+
+.header .intro {
+  text-align: center;
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 700px) {
+  .header h1 {
+    font-size: 1.9rem;
+  }
+}
+
+.header p {
+  width: 90%;
+  margin: 1em auto;
+}
+
+.header .get-started-link {
+  display: block;
+  background-image: linear-gradient(to right, #65e2d9, #339ecc);
+  width: 80%;
+  max-width: 260px;
+  border-radius: 30px;
+  margin: 2em auto;
+  padding: 0.75em 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+@media (min-width: 700px) {
+  .header .get-started-link:hover {
+    background-image: linear-gradient(to right, #65e2d9, #65e2d9);
+  }
+}
+
+.main {
+  background-color: #181f2a;
+}
+
+.grid-features > * {
+  text-align: center;
+  width: 96%;
+  max-width: 390px;
+  margin: 5em auto;
+}
+
+.grid-features > * h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 700px) {
+  .grid-features {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+    max-width: 1000px;
+    margin: 0em auto;
+    padding: 8em 2em;
+  }
+  .grid-features > * {
+    margin: 0;
+  }
+  .grid-features .grid-item2 {
+    margin-top: -0.75em;
+  }
+}
+
+.productivity {
+  max-width: 530px;
+  margin: 0 auto;
+}
+
+@media (min-width: 700px) {
+  .productivity {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    max-width: 1000px;
+  }
+}
+
+.productivity h1 {
+  font-size: 1.1rem;
+  margin-top: 2em;
+}
+
+@media (min-width: 700px) {
+  .productivity h1 {
+    font-size: 2rem;
+    max-width: 300px;
+    line-height: 1.4;
+  }
+}
+
+.productivity p {
+  margin: 1em 0;
+}
+
+.productivity .how-it-works {
+  position: relative;
+  width: max-content;
+}
+
+.productivity .how-it-works > * {
+  vertical-align: middle;
+}
+
+.productivity .how-it-works #circle, .productivity .how-it-works a {
+  transition: all 0.5s ease;
+}
+
+.productivity .how-it-works #circle {
+  fill: #62E0D9;
+}
+
+.productivity .how-it-works a {
+  color: #65e2d9;
+  font-size: 0.85rem;
+  font-family: "Open Sans", sans-serif;
+  margin-right: 0.1em;
+}
+
+.productivity .how-it-works a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #65e2d9;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+@media (min-width: 700px) {
+  .productivity .how-it-works a:hover {
+    color: rgba(255, 255, 255, 0.87);
+  }
+  .productivity .how-it-works a:hover + svg #circle {
+    fill: white;
+  }
+  .productivity .how-it-works a:hover::after {
+    background-color: white;
+  }
+}
+
+@media (min-width: 700px) {
+  .testiomonials {
+    display: flex;
+    max-width: 1200px;
+    gap: 1em;
+    margin: 2em auto 0 auto;
+  }
+}
+
+.testiomonials .client {
+  max-width: 450px;
+  background-color: #202a3c;
+  border-radius: 6px;
+  margin: 2em auto;
+  padding: 1.5em;
+}
+
+@media (min-width: 700px) {
+  .testiomonials .client {
+    max-width: 400px;
+  }
+}
+
+.testiomonials .client p {
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.testiomonials .client .user-info {
+  display: flex;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.testiomonials .client .avatar img {
+  display: block;
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.testiomonials .client .text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testiomonials .client h3 {
+  font-size: 0.75rem;
+}
+
+.testiomonials .client small {
+  font-size: 0.65rem;
+}
+
+.testiomonials .client:first-child {
+  position: relative;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.testiomonials .client:first-child::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #202a3c;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.testiomonials .client:first-child .quote-mark {
+  position: absolute;
+  width: 25px;
+  top: -18px;
+  left: 8px;
+  z-index: -2;
+}
+
+@media (min-width: 700px) {
+  .testiomonials .client:first-child .quote-mark {
+    width: 40px;
+    top: -25px;
+    left: -4px;
+  }
+}
+
+.get-access {
+  background-color: #1c2431;
+  width: 88%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: -15%;
+  text-align: center;
+  border-radius: 6px;
+  transform: translateY(50%);
+}
+
+@media (min-width: 700px) {
+  .get-access {
+    margin-top: -5%;
+  }
+}
+
+.get-access h1 {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 700px) {
+  .get-access h1 {
+    font-size: 1.7rem;
+  }
+}
+
+.get-access p {
+  font-size: 0.8rem;
+  margin: 1em 0;
+}
+
+.get-access input, .get-access button {
+  width: 100%;
+  min-height: 50px;
+  border-radius: 40px;
+  border: none;
+}
+
+.get-access input {
+  margin-top: 0.75em;
+  padding: 0 1.5em;
+  color: #339ecc;
+}
+
+.get-access input::placeholder {
+  color: black;
+}
+
+.get-access input:focus, .get-access input:active {
+  outline: 0;
+}
+
+.get-access button {
+  margin-top: 0.75em;
+  background-image: linear-gradient(45deg, #65e2d9, #339ecc);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: inherit;
+  cursor: pointer;
+}
+
+.get-access .error-message {
+  display: block;
+  text-align: left;
+  margin-left: 2em;
+  margin-top: 0.25em;
+  color: #ff4242;
+  font-size: 0.7rem;
+  transition: all 0.5s ease;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.get-access .error-message.mobile.active {
+  height: auto;
+  opacity: 1;
+  overflow: unset;
+}
+
+.get-access .error-message.desktop {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .get-access form {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .get-access button {
+    margin-top: 0;
+    max-width: 200px;
+  }
+  .get-access button:hover {
+    background-image: linear-gradient(to right, #65e2d9, #65e2d9);
+  }
+  .get-access .error-message.mobile {
+    display: none;
+  }
+  .get-access .error-message.desktop {
+    display: block;
+  }
+  .get-access .error-message.desktop.active {
+    height: auto;
+    opacity: 1;
+    overflow: unset;
+  }
+}
+
+.main .footer {
+  background-color: #0b1523;
+  padding-top: 200px;
+}
+
+@media (min-width: 700px) {
+  .main .footer {
+    padding-top: 150px;
+  }
+}
+
+.main .footer__content-wraper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main .footer .footer-logo {
+  margin: 1em 0 2em 0;
+}
+
+@media (min-width: 700px) {
+  .main .footer .footer-logo img {
+    width: 100px;
+  }
+}
+
+.main .footer .location, .main .footer .phone-number, .main .footer .email {
+  display: flex;
+  max-width: 350px;
+}
+
+.main .footer .location img, .main .footer .phone-number img, .main .footer .email img {
+  display: block;
+  align-self: flex-start;
+  max-width: 20px;
+  padding-top: 0.35em;
+}
+
+.main .footer .location p, .main .footer .phone-number p, .main .footer .email p {
+  margin-left: 1.5em;
+}
+
+.main .footer .phone-number, .main .footer .email {
+  margin: 1em 0;
+}
+
+.main .footer .phone-number img {
+  width: 15px;
+}
+
+.main .footer .about-us {
+  margin: 3em 0;
+}
+
+.main .footer .about-us li,
+.main .footer .contact-us li {
+  margin: 0.75em 0;
+}
+
+.main .footer .about-us li a,
+.main .footer .contact-us li a {
+  font-family: "Raleway", sans-serif;
+}
+
+.main .footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 3em;
+}
+
+.main .footer .social-media i {
+  display: grid;
+  place-items: center;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 700px) {
+  .main .footer .social-media i:hover {
+    color: #65e2d9;
+    border-color: #65e2d9;
+  }
+}
+
+@media (min-width: 700px) {
+  .main .footer .location, .main .footer .phone-number, .main .footer .email,
+  .main .footer .phone-number,
+  .main .footer .email,
+  .main .footer .about-us,
+  .main .footer .contact-us,
+  .main .footer .social-media,
+  .main .footer .about-us li:first-child,
+  .main .footer .contact-us li:first-child {
+    margin: 0;
+  }
+  .main .footer .about-us li a:hover,
+  .main .footer .contact-us li a:hover {
+    font-weight: 700;
+  }
+  .main .footer .email {
+    margin-top: 1em;
+  }
+  .main .footer .row {
+    display: grid;
+    grid-template-columns: minmax(320px, 1fr) repeat(auto-fill, minmax(160px, 1fr));
+    justify-items: center;
+    gap: 2em;
+  }
+}
+/*# sourceMappingURL=main.css.map */

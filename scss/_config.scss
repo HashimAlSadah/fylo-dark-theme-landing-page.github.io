@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+
+$intro-email: hsl(217, 28%, 15%);
+$main-background: hsl(218, 28%, 13%);
+$footer-background: hsl(216, 53%, 9%);
+$testimonials-background: hsl(219, 30%, 18%);
+$inside-all-to-action-gradient: hsl(176, 68%, 64%);
+$inside-call-to-action-gradient2: hsl(198, 60%, 50%);
+$light-red: hsl(0, 100%, 63%);
+$headers-CTA-nav-font: 'Raleway', sans-serif;
+$body-text: 'Open Sans', sans-serif;
+$text-color: rgba(255, 255, 255, 0.87);
+
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+@mixin hideElements(){
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+@mixin showElements(){
+    height: auto;
+    opacity: 1;
+    overflow: unset;
+}
+
+
+body{
+    color: $text-color;
+}
+
+a{
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+h1, h2, h3{
+    font-family: $headers-CTA-nav-font;
+}
+
+p, small{
+    font-size: 0.875rem;
+    font-family: $body-text;
+}
+
+.header, .main > *{
+    padding: 2em;   
+}
+
+.intro .hero img,
+.productivity-hero img{
+    display: block;
+    width: 100%;
+}
+
+@mixin atMediaQ($screen-width: default){
+    @if($screen-width == default){
+        $screen-width: 700px;
+    }
+    @media(min-width: $screen-width){
+        @content;
+    }
+}
